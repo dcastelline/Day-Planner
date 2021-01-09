@@ -16,12 +16,21 @@
 // Timeblock class "container"
     // Business hours = 9-5, 9 timeblocks
 
-$("container")
-var currentDate = moment().format("MMMM Do YYYY");
+// Variables
+var form = $(".container");
+var currentDate = moment().format("dddd, MMMM Do, YYYY");
+var newRow = $("<row>");
+var textArea = $("<textarea>");
+var newBlock = $(".time-block");
+var timeBlock = ["9:00AM", "10:00AM", "11:00AM", "12:00PM", "1:00PM", "2:00PM", "3:00PM", "4:00PM", "5:00PM"];
 
+// Begin function
 $("document").ready(function() {
+    // Current date at top of calendar
     $("#currentDay").text(currentDate);
     console.log(currentDate);
 
+    // Hourly rows
+    form.append(newRow);
 
 });
