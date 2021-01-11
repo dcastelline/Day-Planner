@@ -19,6 +19,7 @@
 // Variables
 var form = $(".container");
 var currentDate = moment().format("dddd, MMMM Do, YYYY");
+var row = $("row");
 var newRow = $("<row>");
 var textArea = $("<textarea>");
 var newBlock = $(".time-block");
@@ -30,7 +31,12 @@ $("document").ready(function() {
     $("#currentDay").text(currentDate);
     console.log(currentDate);
 
-    // Hourly rows
-    form.append(newRow);
+    // Time blocks, rows, hours, text areas, save buttons
+    
 
 });
+
+// time block 
+//     row 
+//         hour 
+//             text area 
