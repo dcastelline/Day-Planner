@@ -12,18 +12,8 @@
 // WHEN I refresh the page
 // THEN the saved events persist
 
-
-// Timeblock class "container"
-    // Business hours = 9-5, 9 timeblocks
-
 // Variables
-var form = $(".container");
 var currentDate = moment().format("dddd, MMMM Do, YYYY");
-var row = $("row");
-var newRow = $("<row>");
-var textArea = $("<textarea>");
-var newBlock = $(".time-block");
-var timeBlock = ["9:00AM", "10:00AM", "11:00AM", "12:00PM", "1:00PM", "2:00PM", "3:00PM", "4:00PM", "5:00PM"];
 
 // Begin function
 $("document").ready(function() {
@@ -31,12 +21,12 @@ $("document").ready(function() {
     $("#currentDay").text(currentDate);
     console.log(currentDate);
 
-    // Time blocks, rows, hours, text areas, save buttons
-    
+    // Saving entries to local storage
+    $(".saveBtn").on("click", function() {
+        var event = $(this).siblings(".description").val();
+        var time = $(this).siblings(".time").text();
+        localStorage.setItem(event, time);
+        $("this").siblings(".description").text(localStorage.value);
+    })
 
 });
-
-// time block 
-//     row 
-//         hour 
-//             text area 
