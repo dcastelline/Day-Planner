@@ -6,7 +6,7 @@ This project is to provide a simple day planner for the hours of 9:00AM-5:00PM. 
 
 ### **Deployed Link**
 
-
+https://dcastelline.github.io/Day-Planner/
 
 ### **Usage**
 
