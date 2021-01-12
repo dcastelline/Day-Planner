@@ -42,12 +42,11 @@ $("document").ready(function() {
     });
 
     // Tracking current hour(h)
-    h = currentDate.h;
+    var d = new Date();
+    var h = d.getHours() - 12;
         console.log(h);
-    t = $(".time").text();
-        console.log(t);
+    var t = [9, 10, 11, 12, 1, 2, 3, 4, 5];
         
-
     // Background colors
     // if (h < )
 
