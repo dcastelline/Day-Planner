@@ -14,8 +14,10 @@
 
 // Begin function
 $("document").ready(function() {
+   
     // Current date at top of calendar
     var currentDate = moment().format("dddd, MMMM Do, YYYY, h:mm a");
+    $("#currentDay").append(currentDate);
 
     // Retrieve stored 
     var h9 = localStorage.getItem("9:00AM");
@@ -41,7 +43,7 @@ $("document").ready(function() {
 
     var h4 = localStorage.getItem("4:00PM");
     $("#4event").text(h4);
-    
+
     var h5 = localStorage.getItem("5:00PM");
     $("#5event").text(h5);
 
@@ -51,7 +53,9 @@ $("document").ready(function() {
         var time = $(this).siblings(".time").text();
         localStorage.setItem(time, value);
         $("this").siblings(".description").textContent(localStorage.value);
-        
     });
+
+    // Background colors
+    
 
 });
